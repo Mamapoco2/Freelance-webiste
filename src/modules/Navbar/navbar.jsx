@@ -1,4 +1,3 @@
-import Logo from "../../assets/react.svg";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -88,7 +87,6 @@ export default function Navbar() {
       >
         {/* Mobile Menu Header */}
         <div className="flex justify-between items-center p-5 border-b border-gray-200">
-          <img src={Logo} alt="Logo" className="h-8" />
           <button
             onClick={closeMenu}
             className="p-2 hover:bg-gray-100 rounded-md transition-colors duration-200"

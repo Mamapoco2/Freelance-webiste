@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="w-full fixed top-0 left-0 z-50 p-5 md:bg-white md:border-b md:border-gray-200 bg-transparent flex justify-between items-center">
+      <nav className="w-full fixed top-0 left-0 z-50 p-5 bg-white flex justify-between items-center border-b border-gray-200">
         <h1 className="font-bold text-3xl">
           Acad<span className="text-green-400">Stack</span>
         </h1>
@@ -86,7 +86,7 @@ export default function Navbar() {
         }`}
       >
         {/* Mobile Menu Header */}
-        <div className="flex justify-between items-center p-5 border-b border-gray-200">
+        <div className="flex justify-end items-center p-5 border-b border-gray-200">
           <button
             onClick={closeMenu}
             className="p-2 hover:bg-gray-100 rounded-md transition-colors duration-200"

@@ -52,38 +52,38 @@ export default function Freelance() {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="w-full min-h-screen flex flex-col justify-center items-center text-center pt-20 bg-gray-100">
-        <h1 className="text-4xl md:text-7xl leading-tight font-light">
+      <div className="w-full min-h-[100dvh] flex flex-col justify-center items-center text-center pt-32 md:pt-20 px-4 bg-gray-100">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl leading-tight font-light">
           Achieve More, <br />
           <span className="text-gray-800 font-medium">Stress Less,</span> <br />
           <span className="text-gray-900 font-semibold">
             Excel Effortlessly.
           </span>
         </h1>
-        <p className="mt-4 text-gray-600 text-sm md:text-base max-w-xl">
+        <p className="mt-4 text-gray-600 text-sm sm:text-base max-w-md sm:max-w-xl">
           Professional freelance services designed to elevate your business with
           simplicity and excellence.
         </p>
-        <div className="flex gap-4 pt-6">
-          <button className="bg-gray-900 text-white font-semibold px-10 py-3 cursor-pointer">
+        <div className="flex flex-col sm:flex-row gap-4 pt-6 w-full sm:w-auto px-6 sm:px-0">
+          <button className="bg-gray-900 text-white font-semibold px-10 py-3 cursor-pointer w-full sm:w-auto">
             Contact Us
           </button>
-          <button className="border border-gray-900 text-gray-900 font-semibold px-10 py-3 hover:bg-black hover:text-white duration-200 cursor-pointer">
+          <button className="border border-gray-900 text-gray-900 font-semibold px-10 py-3 hover:bg-black hover:text-white duration-200 cursor-pointer w-full sm:w-auto">
             Sign Up
           </button>
         </div>
       </div>
 
       {/* Section 2 */}
-      <section className="h-[150vh] flex flex-col items-center justify-center px-6">
-        <h2 className="text-5xl font-medium mb-4">What We Offer</h2>
-        <p className="text-gray-700 mb-10 max-w-2xl text-center">
+      <section className="py-20 md:py-32 flex flex-col items-center justify-center px-6">
+        <h2 className="text-3xl sm:text-5xl font-medium mb-4">What We Offer</h2>
+        <p className="text-gray-700 mb-10 max-w-2xl text-center text-sm sm:text-base">
           Comprehensive freelance services designed to meet your business needs
           with precision and excellence.
         </p>
 
         {/* Grid for services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
           {Services}
         </div>
       </section>

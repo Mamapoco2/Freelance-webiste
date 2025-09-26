@@ -14,11 +14,12 @@ export const services = [
     icon: Palette,
   },
   {
-    title: "Content Writing",
+    title: "Academic & Paperwork Services",
     description:
-      "Compelling content that tells your story and connects with your audience effectively.",
+      "We provide expert assistance in Thesis and Capstone Papers, Academic Papers, Reviews, Essays, Presentations, and Technical Papers.",
     icon: FileText,
   },
+
   {
     title: "Mobile Development",
     description:

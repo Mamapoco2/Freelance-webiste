@@ -42,6 +42,12 @@ export default function Navbar() {
           >
             Services
           </Link>
+          <Link
+            to="/contact"
+            className="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-black after:transition-transform after:duration-300 hover:after:scale-x-100"
+          >
+            Contact
+          </Link>
         </div>
 
         {/* Desktop CTA Button */}
@@ -108,6 +114,13 @@ export default function Navbar() {
             className="uppercase text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 border-b border-transparent hover:border-black pb-2"
           >
             Services
+          </Link>
+          <Link
+            to="/contact"
+            onClick={closeMenu}
+            className="uppercase text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 border-b border-transparent hover:border-black pb-2"
+          >
+            contact
           </Link>
 
           {/* Mobile CTA Button */}

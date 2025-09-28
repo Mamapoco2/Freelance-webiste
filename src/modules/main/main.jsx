@@ -1,9 +1,8 @@
-import Navbar from "../Navbar/navbar";
-import Data from "../../data";
-import faqs from "../../FAQ";
 import { Plus } from "lucide-react";
 
 import Footer from "../footer/footer";
+import Data from "../../data";
+import faqs from "../../FAQ";
 
 import { useState } from "react";
 
@@ -49,9 +48,6 @@ export default function Freelance() {
 
   return (
     <main className="min-h-screen w-full overflow-x-hidden animate-fade-in">
-      <Navbar />
-
-      {/* Hero Section */}
       <div className="w-full min-h-[100dvh] flex flex-col justify-center items-center text-center pt-32 md:pt-20 px-4 bg-gray-100">
         <h1 className="text-3xl sm:text-5xl md:text-7xl leading-tight font-light">
           Achieve More, <br />
@@ -74,7 +70,6 @@ export default function Freelance() {
         </div>
       </div>
 
-      {/* Section 2 */}
       <section className="py-20 md:py-32 flex flex-col items-center justify-center px-6">
         <h2 className="text-3xl sm:text-5xl font-medium mb-4">What We Offer</h2>
         <p className="text-gray-700 mb-10 max-w-2xl text-center text-sm sm:text-base">
@@ -82,13 +77,11 @@ export default function Freelance() {
           with precision and excellence.
         </p>
 
-        {/* Grid for services */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
           {Services}
         </div>
       </section>
 
-      {/* Section 3 */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">

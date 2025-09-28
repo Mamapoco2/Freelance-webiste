@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
+import About from "../about/about";
+import { Link, Routes, Route } from "react-router-dom";
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -21,36 +24,24 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex uppercase justify-evenly gap-4 text-sm">
-          <a
-            href="#"
-            className="relative pb-1 
-          after:content-[''] after:absolute after:left-0 after:bottom-0 
-          after:h-[2px] after:w-full after:origin-left after:scale-x-0 
-          after:bg-black after:transition-transform after:duration-300 
-          hover:after:scale-x-100"
+          <Link
+            to="/"
+            className="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-black after:transition-transform after:duration-300 hover:after:scale-x-100"
           >
             Home
-          </a>
-          <a
-            href="#"
-            className="relative pb-1 
-          after:content-[''] after:absolute after:left-0 after:bottom-0 
-          after:h-[2px] after:w-full after:origin-left after:scale-x-0 
-          after:bg-black after:transition-transform after:duration-300 
-          hover:after:scale-x-100"
+          </Link>
+          <Link
+            to="/about"
+            className="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-black after:transition-transform after:duration-300 hover:after:scale-x-100"
           >
             About
-          </a>
-          <a
-            href="#"
-            className="relative pb-1 
-          after:content-[''] after:absolute after:left-0 after:bottom-0 
-          after:h-[2px] after:w-full after:origin-left after:scale-x-0 
-          after:bg-black after:transition-transform after:duration-300 
-          hover:after:scale-x-100"
+          </Link>
+          <Link
+            to="/services"
+            className="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-black after:transition-transform after:duration-300 hover:after:scale-x-100"
           >
             Services
-          </a>
+          </Link>
         </div>
 
         {/* Desktop CTA Button */}
@@ -97,27 +88,27 @@ export default function Navbar() {
 
         {/* Mobile Menu Items */}
         <div className="flex flex-col p-6 space-y-8">
-          <a
-            href="#"
+          <Link
+            to="/"
             onClick={closeMenu}
             className="uppercase text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 border-b border-transparent hover:border-black pb-2"
           >
             Home
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/about"
             onClick={closeMenu}
             className="uppercase text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 border-b border-transparent hover:border-black pb-2"
           >
             About
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/services"
             onClick={closeMenu}
             className="uppercase text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 border-b border-transparent hover:border-black pb-2"
           >
             Services
-          </a>
+          </Link>
 
           {/* Mobile CTA Button */}
           <button

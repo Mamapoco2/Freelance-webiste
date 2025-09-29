@@ -3,6 +3,7 @@ import { CheckCircle } from "lucide-react";
 
 import Service1 from "./Assets/service1.png";
 import Service2 from "./Assets/service2.png";
+import Service3 from "./Assets/service3.png";
 
 export default function Services() {
   const techStack = [
@@ -49,6 +50,10 @@ export default function Services() {
         </div>
 
         <div className="lg:w-1/2 w-full text-left">
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">
+            Web Development
+          </h1>
+
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
             We offer comprehensive web development services designed to build
             reliable, user-friendly websites that cater to your specific needs.
@@ -75,6 +80,50 @@ export default function Services() {
       <section className="flex flex-col lg:flex-row items-center justify-center gap-12 px-6 py-20 max-w-7xl mx-auto">
         <div className="lg:w-1/2 w-full flex justify-center">
           <img
+            src={Service3}
+            alt="Database Management Showcase"
+            className="rounded-2xl shadow-lg"
+          />
+        </div>
+
+        <div className="lg:w-1/2 w-full text-left">
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">
+            Database Management
+          </h1>
+
+          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            Our database management services are focused on MySQL, ensuring
+            secure, reliable, and optimized data handling for your applications.
+            From schema design to performance tuning, we make sure your data
+            systems run smoothly and efficiently.
+          </p>
+          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            Whether you need database setup, optimization, or long-term
+            maintenance, we provide tailored solutions to keep your business
+            data accessible, consistent, and protected. Our expertise covers:
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
+            {[
+              "Database Design & Modeling",
+              "Data Migration & Integration",
+              "Performance Optimization",
+              "Backup & Recovery Solutions",
+              "Security & Access Control",
+              "Ongoing Maintenance & Support",
+            ].map((service, index) => (
+              <div key={index} className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-green-500" />
+                <span className="text-gray-800">{service}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="flex flex-col lg:flex-row items-center justify-center gap-12 px-6 py-20 max-w-7xl mx-auto">
+        <div className="lg:w-1/2 w-full flex justify-center">
+          <img
             src={Service2}
             alt="Academic Papers Showcase"
             className="rounded-2xl shadow-lg"
@@ -82,6 +131,10 @@ export default function Services() {
         </div>
 
         <div className="lg:w-1/2 w-full text-left">
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">
+            Academic Papers
+          </h1>
+
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
             We provide professional assistance in preparing high-quality
             academic papers tailored to your needs. Whether you’re working on a

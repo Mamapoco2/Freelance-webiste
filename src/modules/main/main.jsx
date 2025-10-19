@@ -1,4 +1,5 @@
 import { Plus } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import Footer from "../footer/footer";
 import Data from "../../data";
@@ -61,12 +62,12 @@ export default function Freelance() {
           simplicity and excellence.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 pt-6 w-full sm:w-auto px-6 sm:px-0">
-          <button className="bg-gray-900 text-white font-semibold px-10 py-3 cursor-pointer w-full sm:w-auto">
+          <Link
+            to="/contact"
+            className="bg-gray-900 text-white font-semibold px-10 py-3 cursor-pointer w-full sm:w-auto"
+          >
             Contact Us
-          </button>
-          <button className="border border-gray-900 text-gray-900 font-semibold px-10 py-3 hover:bg-black hover:text-white duration-200 cursor-pointer w-full sm:w-auto">
-            Sign Up
-          </button>
+          </Link>
         </div>
       </div>
 

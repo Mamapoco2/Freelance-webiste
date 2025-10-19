@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -29,24 +30,24 @@ export default function Footer() {
           <h3 className="text-white text-sm font-semibold mb-4">Navigation</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/" className="hover:text-white">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/about" className="hover:text-white">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/services" className="hover:text-white">
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/contact" className="hover:text-white">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -54,24 +55,24 @@ export default function Footer() {
           <h3 className="text-white text-sm font-semibold mb-4">Services</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/services" className="hover:text-white">
                 Web Development
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/services" className="hover:text-white">
                 UI/UX Design
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/services" className="hover:text-white">
                 Digital Marketing
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/services" className="hover:text-white">
                 Content Writing
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

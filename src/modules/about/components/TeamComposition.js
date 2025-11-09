@@ -1,6 +1,7 @@
 import Member1 from "../Assets/JC.jpg";
 import Member2 from "../Assets/Colin.png";
 import Member3 from "../Assets/Sharmaine.png";
+import Member4 from "../Assets/Dean.jpg";
 
 const team = [
   {
@@ -34,13 +35,13 @@ const team = [
     },
   },
   {
-    name: "John Carlo V. Goco",
-    roles: ["Front-End Developer", "UI/UX Designer"],
-    image: Member1,
+    name: "Dean Zaballero",
+    roles: ["Full-Stack Developer"],
+    image: Member4,
     quote: "Design with purpose, build with passion.",
     socials: {
-      linkedin: "https://linkedin.com/in/john-carlo-goco-a8768a384",
-      github: "https://github.com/Mamapoco2",
+      linkedin: "https://ph.linkedin.com/in/dean-andrew-zaballero-59a937273",
+      github: "https://github.com/feyded",
     },
   },
 ];

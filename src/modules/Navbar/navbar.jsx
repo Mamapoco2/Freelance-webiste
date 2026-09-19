@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-import About from "../about/about";
 import { Link, Routes, Route } from "react-router-dom";
 
 export default function Navbar() {
@@ -50,12 +49,13 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Desktop CTA Button */}
-        <button className="hidden md:block p-2 bg-black text-white rounded-md cursor-pointer">
-          Inquire now!
-        </button>
+        <Link
+          to="/contact"
+          className="hidden md:block p-2 bg-black text-white rounded-md cursor-pointer"
+        >
+          Inquire Now!
+        </Link>
 
-        {/* Mobile Hamburger Button */}
         <button
           onClick={toggleMenu}
           className="md:hidden p-2 hover:bg-gray-100 rounded-md transition-colors duration-200"
@@ -68,7 +68,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div
           className="fixed inset-0 backdrop-blur-sm z-40 md:hidden"
@@ -76,13 +75,11 @@ export default function Navbar() {
         />
       )}
 
-      {/* Mobile Menu Sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-3/5 bg-white z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Mobile Menu Header */}
         <div className="flex justify-end items-center p-5 border-b border-gray-200">
           <button
             onClick={closeMenu}
@@ -92,7 +89,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu Items */}
         <div className="flex flex-col p-6 space-y-8">
           <Link
             to="/"
@@ -123,7 +119,6 @@ export default function Navbar() {
             contact
           </Link>
 
-          {/* Mobile CTA Button */}
           <button
             onClick={closeMenu}
             className="mt-8 p-3 bg-black text-white rounded-md cursor-pointer hover:bg-gray-800 transition-colors duration-200 text-center"

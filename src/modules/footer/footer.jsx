@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -27,28 +28,20 @@ export default function Footer() {
         </div>
         <div>
           <h3 className="text-white text-sm font-semibold mb-4">Navigation</h3>
-          <ul className="space-y-2">
-            <li>
-              <a href="#" className="hover:text-white">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Contact
-              </a>
-            </li>
-          </ul>
+          <div className="space-y-2 flex flex-col">
+            <Link to="/" className="hover:text-white">
+              Home
+            </Link>
+            <Link to="/about" className="hover:text-white">
+              About
+            </Link>
+            <Link to="/services" className="hover:text-white">
+              Services
+            </Link>
+            <Link to="/contact" className="hover:text-white">
+              Contact
+            </Link>
+          </div>
         </div>
         <div>
           <h3 className="text-white text-sm font-semibold mb-4">Services</h3>
@@ -65,12 +58,7 @@ export default function Footer() {
             </li>
             <li>
               <a href="#" className="hover:text-white">
-                Digital Marketing
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Content Writing
+                Academic Writing
               </a>
             </li>
           </ul>

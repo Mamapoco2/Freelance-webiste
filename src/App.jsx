@@ -4,12 +4,14 @@ import About from "./modules/about/about";
 import Navbar from "./modules/Navbar/navbar";
 import Services from "./modules/services/services";
 import Contact from "./modules/contact/contact";
+import ScrollToTop from "./shared/ScrollToTop";
 
 export default function Freelance() {
   return (
     <>
       <main className="animate-fade-in">
-        <Navbar />{" "}
+        <ScrollToTop />
+        <Navbar />
         <Routes>
           <Route index element={<Main />} />
           <Route path="/about" element={<About />} />

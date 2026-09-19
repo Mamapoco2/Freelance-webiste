@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-import { Link, Routes, Route } from "react-router-dom";
+import About from "../about/about";
+import { NavLink, Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,11 +50,12 @@ export default function Navbar() {
           </Link>
         </div>
 
+        {/* Desktop CTA Button */}
         <Link
           to="/contact"
           className="hidden md:block p-2 bg-black text-white rounded-md cursor-pointer"
         >
-          Inquire Now!
+          Inquire now!
         </Link>
 
         <button
@@ -90,41 +92,61 @@ export default function Navbar() {
         </div>
 
         <div className="flex flex-col p-6 space-y-8">
-          <Link
+          <NavLink
             to="/"
             onClick={closeMenu}
-            className="uppercase text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 border-b border-transparent hover:border-black pb-2"
+            className={({ isActive }) =>
+              `uppercase text-lg font-medium pb-2 border-b transition-all duration-200 ${
+                isActive
+                  ? "text-black border-black"
+                  : "text-gray-700 border-transparent hover:text-gray-900 hover:border-black"
+              }`
+            }
           >
             Home
-          </Link>
-          <Link
+          </NavLink>
+
+          <NavLink
             to="/about"
             onClick={closeMenu}
-            className="uppercase text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 border-b border-transparent hover:border-black pb-2"
+            className={({ isActive }) =>
+              `uppercase text-lg font-medium pb-2 border-b transition-all duration-200 ${
+                isActive
+                  ? "text-black border-black"
+                  : "text-gray-700 border-transparent hover:text-gray-900 hover:border-black"
+              }`
+            }
           >
             About
-          </Link>
-          <Link
+          </NavLink>
+
+          <NavLink
             to="/services"
             onClick={closeMenu}
-            className="uppercase text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 border-b border-transparent hover:border-black pb-2"
+            className={({ isActive }) =>
+              `uppercase text-lg font-medium pb-2 border-b transition-all duration-200 ${
+                isActive
+                  ? "text-black border-black"
+                  : "text-gray-700 border-transparent hover:text-gray-900 hover:border-black"
+              }`
+            }
           >
             Services
-          </Link>
-          <Link
+          </NavLink>
+
+          <NavLink
             to="/contact"
             onClick={closeMenu}
-            className="uppercase text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 border-b border-transparent hover:border-black pb-2"
+            className={({ isActive }) =>
+              `uppercase text-lg font-medium pb-2 border-b transition-all duration-200 ${
+                isActive
+                  ? "text-black border-black"
+                  : "text-gray-700 border-transparent hover:text-gray-900 hover:border-black"
+              }`
+            }
           >
-            contact
-          </Link>
-
-          <button
-            onClick={closeMenu}
-            className="mt-8 p-3 bg-black text-white rounded-md cursor-pointer hover:bg-gray-800 transition-colors duration-200 text-center"
-          >
-            Inquire now!
-          </button>
+            Contact
+          </NavLink>
         </div>
       </div>
     </>
